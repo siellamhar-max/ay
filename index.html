@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -561,18 +560,7 @@
 /* ================================================= */
 /* === 8. BATCHMATES PAGE SPECIFIC STYLES (Updated) === */
 /* ================================================= */
-
-html, body{
-    overflow: hidden;
-}
-
-.batchimg{
-    margin-top: -12rem;
-width: 2160px;
-height: auto;
-object-fit: cover;  
-}
-
+      
 #batchmates { 
     /* CRITICAL FIX: Ensures the absolute positioning of child elements (buttons) works correctly */
     position: relative; 
@@ -582,10 +570,14 @@ object-fit: cover;
     padding-bottom: 40px; /* Space for the fixed names footer */
     
     /* --- REVEALED BACKGROUND --- */
-    background: url(); 
+    background: url('https://lh3.googleusercontent.com/pw/AP1GczOK_KMrr_GSw_AjCxfCnfa69UVJz46tjdBJe_sLi-ig28sMJck0ahoDbbGyBY5c4tHKGnxwqngW_1IWHDFukO1KpJxe3_OEYCUrSduNpBkI7tny1Lg=w2400'); 
     background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px; 
     
     /* Ensure nothing is clipping the buttons */
+    overflow: hidden; /* Only include this if your general styles don't already define it */
 }
 
 #batchmates h1 {
@@ -639,21 +631,21 @@ CSS
 
 /* =============== NAMES FOOTER (Z-Index Confirmation) =============== */
 .names-footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     right: 0;
     /* CONFIRMATION: The button z-index (1000) is much higher than this (50). */
-    z-index: 50; 
+    z-index: 1; 
+    display: none; 
     background: linear-gradient(to top, rgba(10, 10, 26, 1), rgba(10, 10, 26, 0.806), transparent 100%);
     padding: 2rem 5% 3rem;
 }
 
 .name-list-container {
- 
     column-count: 5;
     column-gap: 20px;
-    max-width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 /* ... rest of your styles ... */
@@ -717,9 +709,6 @@ CSS
 #batchmates .card-container { display: none; } 
 /* The closing bracket '}' in your snippet suggests this is inside a media query, 
    ensure you match the structure of your original CSS. */
-
-
-   
     </style>
 </head>
 
@@ -949,17 +938,14 @@ CSS
         </div>
     </div>
 
-
-
-    
+    <div class="page" id="batchmates">
         <h1>PATIbayan (Class 2028)</h1>
-        <img class="batchimg" src="https://lh3.googleusercontent.com/pw/AP1GczP-Y7gUfZFioH0RyA8i1cuQFLccZOinC3ms_PsVtcGHFmYJwV8FTZkRiSXl1xzLY_zHaDzDWynLvJ6A9vRjzwnPZqDTXULc1jfXhHdpgfezvf7_Ijw=w2400" alt="Batchmate Photo" onerror="this.onerror=null; this.src='https://placehold.co/300x150/800080/FFFFFF?text=Batchmate+1';">
         <div class="page-content-wrapper animate-in">
             
             <div class="card-container"> 
                 <div class="group-photo-card">
                     <div class="family-image-container">
-                        
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczMVNlicZgohfbPhskj3HX4kla5zDcoe3cTf7nQNKcOu_Iyd-xOp0K7TiIutQ0Re6kZBEua_JL4H7t-6TfcinD_3-dZEgBJqM-T1NuOzQZcH36VZXA=w24002" alt="Batchmates Group Photo" onerror="this.onerror=null; this.src='https://placehold.co/800x200/0000FF/FFFFFF?text=Batchmates+Photo';">
                     </div>
                     <div class="family-text-content">
                         <div class="family-title batchmates-title">Our Cohort: Web Technology 2025</div>
@@ -971,7 +957,7 @@ CSS
 
                 <div class="batchmate-card-item">
                     <div class="family-image-container">
-
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczP-Y7gUfZFioH0RyA8i1cuQFLccZOinC3ms_PsVtcGHFmYJwV8FTZkRiSXl1xzLY_zHaDzDWynLvJ6A9vRjzwnPZqDTXULc1jfXhHdpgfezvf7_Ijw=w2400" alt="Batchmate Photo" onerror="this.onerror=null; this.src='https://placehold.co/300x150/800080/FFFFFF?text=Batchmate+1';">
                     </div>
                     <div class="family-text-content">
                         <div class="family-title">Batchmate 1</div>
